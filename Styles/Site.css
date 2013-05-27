@@ -443,10 +443,8 @@ nav ul
 
 /* Aside Zones */
 /* Navigation */
-#layout-navigation 
-{
-    float: left; width: 360px;
-}
+.aside-3 #layout-navigation { float: left; width: 180px; }
+.aside-3 #layout-content { float: right; width: 780px; }
 
 /* If zone 1 is on */
 .aside-1 #layout-content { float: right; width: 600px; }
@@ -460,6 +458,21 @@ nav ul
 .aside-12 #layout-content { width: 600px; }
 .aside-12 .aside-first, .aside-12 .aside-second { width: 180px; }
 .aside-12 .aside-first, .aside-12 .aside-second, .aside-12 #layout-content { float:left; }
+
+/* If nav, zone 1 are on */
+.aside-13 #layout-content { width: 600px; }
+.aside-13 .aside-first, .aside-13 #layout-navigation { width: 180px; }
+.aside-13 .aside-first, .aside-13 #layout-navigation, .aside-13 #layout-content { float:left; }
+
+/* If nav, zone 2 are on */
+.aside-23 #layout-content { width: 600px; }
+.aside-23 .aside-second, .aside-23 #layout-navigation { width: 180px; }
+.aside-23 .aside-second, .aside-23 #layout-navigation, .aside-23 #layout-content { float:left; }
+
+/* If nav, zones 1, 2 are on */
+.aside-123 #layout-content { width: 420px; }
+.aside-123 .aside-first, .aside-123 .aside-second, .aside-123 #layout-navigation { width: 180px; }
+.aside-123 .aside-first, .aside-123 .aside-second, .aside-123 #layout-navigation, .aside-123 #layout-content { float:left; }
 
 /* Tripel Zones*/
 #layout-tripel > div { float:left; width:960px; }

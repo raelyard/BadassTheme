@@ -23,7 +23,8 @@
     ***************************************************************/
 
     //Add classes to the wrapper div to toggle aside widget zones on and off
-    var asideClass = CalcuClassify(new [] {"AsideFirst", "AsideSecond"}, "aside-"); // for aside-1, aside-2 or aside-12 if any of the aside zones are filled
+    // treating nav as another aside - will be the first and make the first the second and the second the third - calling it 3 in the order here, though, to keep 1 and 2 naming consistent
+    var asideClass = CalcuClassify(new [] {"AsideFirst", "AsideSecond", "Navigation"}, "aside-"); // for aside-1, aside-2, aside-3 (nav only) or aside-123 if any of the aside zones are filled
     if (HasText(asideClass)) {
         Model.Classes.Add(asideClass);
     }
@@ -73,8 +74,13 @@
 <div id="layout-main-container">
 <div id="layout-main" class="group">
     @if (Model.Navigation != null) {
-    <aside id="aside-first" class="aside-first group">
+    <aside id="layout-navigation" class="aside-first group">
         @Zone(Model.Navigation)
+    </aside>
+    }
+    @if (Model.AsideFirst != null) {
+    <aside id="aside-first" class="aside-first group">
+        @Zone(Model.AsideFirst)
     </aside>
     }
     <div id="layout-content" class="group">
