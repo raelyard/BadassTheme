@@ -45,7 +45,6 @@
 
     WorkContext.Layout.Header.Add(New.Branding(), "5"); // Site name and link to the home page
     WorkContext.Layout.Footer.Add(New.BadgeOfHonor(), "5"); // Powered by Orchard
-    WorkContext.Layout.Footer.Add(New.User(), "10"); // Login and dashboard links
 
     /* Last bit of code to prep the layout wrapper
     ***************************************************************/
@@ -61,11 +60,6 @@
     </div>
 </header>
 }
-@if (Model.Navigation != null) {
-<div id="layout-navigation" class="group">
-    @Zone(Model.Navigation)
-</div>
-}
 @if (Model.Featured != null) {
 <div id="layout-featured" class="group">
     @Zone(Model.Featured)
@@ -78,9 +72,9 @@
 }
 <div id="layout-main-container">
 <div id="layout-main" class="group">
-    @if (Model.AsideFirst != null) {
+    @if (Model.Navigation != null) {
     <aside id="aside-first" class="aside-first group">
-        @Zone(Model.AsideFirst)
+        @Zone(Model.Navigation)
     </aside>
     }
     <div id="layout-content" class="group">
