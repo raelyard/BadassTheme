@@ -297,7 +297,7 @@ nav ul
 	}
 	nav ul li.current 
 	{
-		background: #f4c274;
+		background: #8fd3be;
 	}
 	nav ul a 
 	{
@@ -314,7 +314,7 @@ nav ul
 	
 	nav ul li:hover
 	{
-		background: #edf0a6 repeat-y left;
+		background: #8eb3ab repeat-y left;
 	}
 
         
@@ -325,7 +325,7 @@ nav ul
         font-size: 2.9em;
         padding: 0;
         margin: 0;
-        background-color: #afa9a4
+        background-color: #aec8be
     }
     #branding a 
     {
